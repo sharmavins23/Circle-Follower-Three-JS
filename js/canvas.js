@@ -5,6 +5,9 @@ const camera = new THREE.PerspectiveCamera(
     0.1, // Frustum near plane
     1000 // Frustum far plane
 );
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
 
 // Draw an ellipse curve
 const curve = new THREE.EllipseCurve(
@@ -24,3 +27,11 @@ const material = new THREE.LineBasicMaterial({
     linewidth: 2, // Deprecated?
 });
 const ellipse = new THREE.Line(geometry, material);
+scene.add(ellipse);
+
+function animate() {
+    requestAnimationFrame(animate);
+    render();
+}
+
+animate();
