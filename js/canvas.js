@@ -13,8 +13,8 @@ document.body.appendChild(renderer.domElement);
 const curve = new THREE.EllipseCurve(
     0,
     0, // Center x, y
-    100,
-    100, // Radius x, y
+    50,
+    50, // Radius x, y
     0,
     2 * Math.PI, // Angle start, end
     false, // Clockwise
